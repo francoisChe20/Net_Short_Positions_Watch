@@ -40,10 +40,7 @@ from selenium.webdriver.common.by import By
 
 warnings.filterwarnings("ignore")
 
-# proxies = {
-#     "http":"http://LOGIN:PASSWD@proxy60-2.oddo.fr:8080",
-#     "https":"https://LOGIN:PASSWD@proxy60-2.oddo.fr:8080"
-# }
+
 
 def get_french_database() :
 
@@ -55,7 +52,7 @@ def get_french_database() :
     lien = f"https://www.amf-france.org/fr/actualites-publications/dossiers-thematiques/ventes-decouvert"
     # Les trois arguments proxies, verify et stream sont indispensables (en tout cas
     # au moment où je rédige cet algo) pour pouvoir effectuer une requête internet
-    # malgré le pare-feu d'Oddo BHF.
+  
     chrome_options = webdriver.ChromeOptions()
     prefs = {'download.default_directory' : r"C:\Users\33659\Desktop\Net shorts\Data Bases\FR"}
     chrome_options.add_experimental_option('prefs', prefs)
@@ -112,9 +109,7 @@ def get_french_shorts_online():
        
     
 
-    # Les trois arguments proxies, verify et stream sont indispensables (en tout cas
-    # au moment où je rédige cet algo) pour pouvoir effectuer une requête internet
-    # malgré le pare-feu d'Oddo BHF.
+
     chrome_options = webdriver.ChromeOptions()
     prefs = {'download.default_directory' : r"C:\Users\33659\Desktop\Net shorts\Data Bases\Fr_short_files"}
     chrome_options.add_experimental_option('prefs', prefs)
